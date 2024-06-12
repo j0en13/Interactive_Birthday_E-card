@@ -1,0 +1,345 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: relative;
+}
+
+.bdayCake {
+  position: relative;
+  left: -50px;
+  top:200px;
+  transform: scale(0.5);
+  transform-origin: top left;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.plate {
+  position:absolute;
+  width: 242px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #2a9d8f;
+}
+
+.plate:before {
+  content: "";
+  position: absolute;
+  width: 195px;
+  height: 90px;
+  background-color: #9c6644;
+  top: -90px;
+  left: 25px;
+}
+
+.plate:after {
+  content: "";
+  position: absolute;
+  width: 195px;
+  height: 10px;
+  background-color: #ffd166;
+  top: -60px;
+  left: 25px;
+  box-shadow: 0px 25px #f4978e;
+}
+
+.cream {
+  position: absolute;
+  width: 195px;
+  height: 20px;
+  background-color: #f08080;
+  top: -110px;
+  left: 25px;
+}
+
+.cream:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  background-color: #f08080;
+  top: 10px;
+  border-radius: 20px;
+  box-shadow: 15px 5px #9c6644, 30px -5px #f08080, 45px 0px #9c6644, 60px 4px #f08080, 75px 3px #9c6644, 90px -5px #f08080, 105px 5px #9c6644, 120px -5px #f08080, 135px 0px #9c6644, 150px 0px #f08080, 165px 0px #9c6644, 180px 3px #f08080;
+}
+
+.cream:after{
+  position: absolute;
+  content: "";
+  background-color: rgb(0,0,0,0,1);
+  left: 98px;
+  width: 97.5px;
+  height: 110px;
+  border-radius: 0 20px 0 0;
+}
+
+.candle {
+  position: absolute;
+  height: 40px;
+  width: 10px;
+  background: repeating-linear-gradient(#fae0e4, #fae0e4 5px, #ff0a54 5px, #ff0a54 10px);
+  top: -150px;
+  left: 118px;
+  box-shadow: inset -5px 0px rgba(0,0,0,0.1);
+}
+
+.candle:before {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  height: 10px;
+  left: 4px;
+  width: 2px;
+  top: -10px;
+}
+
+.candle:after {
+  content: "";
+  position: absolute;
+  background-color: #fcca46;
+  height: 20px;
+  width: 20px;
+  top: -28px;
+  border-radius: 80% 15% 55% 50%/ 55% 15% 80% 50%;
+  box-shadow: inset -3px 3px #fe7f2d;
+  transform: rotate(-45deg);
+  opacity: 0.9;
+  animation: scale .5s ease-out infinite;
+}
+
+.flame {
+  position: absolute;
+}
+
+.flame:before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  top: 0;
+  left:123px;
+  background-color: rgba(0,0,0,0.1);
+  width: 118px;
+}
+
+.one {
+  position: absolute;
+  top: -160px;
+  left: 100px;
+  font-size: 20px;
+  color: #fcca46;
+  text-shadow: 33px -30px #fcca46;
+  animation: flash .8s ease infinite alternate;
+}
+
+.two {
+  position: absolute;
+  top: -180px;
+  left: 100px;
+  font-size: 15px;
+  color: #fcca46;
+  text-shadow: 35px 30px #fcca46;
+  animation: flash .8s ease infinite alternate;
+}
+
+.three {
+  position: absolute;
+  top: -160px;
+  left: -195px;
+  font-size: 10px;
+  color: #fcca46;
+  text-shadow: 30px 30px #fcca46;
+  animation: flash .8s ease infinite alternate;
+}
+
+.happy {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 0;
+  background-image: linear-gradient(120deg, #ffd856 0%, #f98c6e 100%);
+  transition: 0.1s;
+  padding: 10px;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 250px;
+  height:350px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 5s;
+}
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-150deg); 
+}
+
+.birthdayCard:hover .front-text {
+  display: none;
+}
+
+.birthdayCard:hover .wrap-deco {
+  display: none;
+}
+
+.birthdayCard:hover .wrap-decoTwo {
+  display: none;
+}
+
+.birthdayCard:hover .plate {
+  display: none;
+}
+
+.cardFront {
+  position: relative;
+  background-color: #fff;
+  width: 250px;
+  height:350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.13), 30px 0 50px rgba(0,0,0,0.1);
+  transition: .4s;
+}
+
+.front-text {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+
+.happy1, .toyou {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  backface-visibility: hidden;
+  font-size: 30px; 
+}
+
+.happy1 {
+  top:198px;
+}
+
+.toyou {
+  top:123px;
+}
+
+.bday {
+  position: relative;
+  font-family: arial;
+  font-size: 35px;
+  text-align: center;
+  top:163px;
+}
+
+.wrap-deco {
+  position: absolute;
+  top:-230px;
+  left:-200px;
+}
+
+.decorations {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+
+.decorations:before, .decorations:after, .decorationsTwo:before, .decorationsTwo:after, .decorationsThree:before, .decorationsThree:after {
+  content:"";
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  width:0;
+  height:0;
+}
+
+.decorations:before {
+  border-top: 40px solid #e8f054;
+  top:297px;
+  left:210px;
+  transform: rotate(-5deg);
+}
+
+.decorations:after{
+  border-top: 40px solid #33d581;
+  top:288px;
+  left:260px;
+  transform: rotate(-17deg);
+}
+
+.decorationsTwo:before {
+  border-top: 40px solid #00f5d4;
+  top:268px;
+  left:315px;
+  transform: rotate(-30deg);
+}
+
+.decorationsTwo:after, .decorationsThree:after {
+  border-top: 40px solid #eb2d92;
+  top:238px;
+  left:355px;
+  transform: rotate(-40deg);
+}
+
+.wrap-decoTwo {
+  transform: scaleX(-1);
+  position: absolute;
+  top:-230px;
+  left:445px; 
+}
+
+.decorationsThree:before {
+  border-top: 40px solid #00bbf9;
+  top:268px;
+  left:315px;
+  transform: rotate(-30deg);
+}
+
+.cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: 250px;
+  height:350px;
+  z-index:-1;
+  left:0;
+  top:0;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+}
+
+.inside-text {
+  position: relative;
+  top:-160px;
+  transform: scale(0.7);
+}
+
+.wishes {
+  position: relative;
+  top:-100px;
+  margin: 25px;
+}
+
+p {
+  font-family: 'Brush Script MT', cursive;
+  color: #333;
+}
+
+@keyframes scale {
+  0% {transform: scaleY(1) rotate(-45deg); opacity: 0.9;}
+  50% {transform: scaleY(0.9) rotate(-45deg); opacity: 0.8;}
+  100% {transform: scaleY(1) rotate(-45deg); opacity: 0.9;}
+}
